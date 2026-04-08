@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-code-guide-logo.svg">
 </picture>
 
 # 为 Claude Code Guide 做贡献

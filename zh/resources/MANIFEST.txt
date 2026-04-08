@@ -15,10 +15,10 @@ resources/
 ├─ 📄 MANIFEST.txt                       (this) 文件清单
 │
 ├─ 📁 logos/                             (8.0K total)
-│  └─ 📊 claude-howto-logo.svg          (8.0K) 800×200px 主 Logo
+│  └─ 📊 claude-code-guide-logo.svg          (8.0K) 800×200px 主 Logo
 │
 ├─ 📁 icons/                             (8.0K total)
-│  └─ 🔷 claude-howto-icon.svg          (8.0K) 256×256px 应用图标
+│  └─ 🔷 claude-code-guide-icon.svg          (8.0K) 256×256px 应用图标
 │
 └─ 📁 favicons/                          (20K total)
    ├─ 🔹 favicon-16.svg                 (3.2K) 16×16px 浏览器标签页
@@ -82,13 +82,13 @@ FOR WEBSITES (HTML):
   <link rel="apple-touch-icon" href="/resources/favicons/favicon-128.svg">
 
 FOR MARKDOWN:
-  ![Claude Code Guide](resources/icons/claude-howto-icon.svg)
+  ![Claude Code Guide](resources/icons/claude-code-guide-icon.svg)
 
 FOR REACT/NEXT.JS:
-  import icon from './resources/icons/claude-howto-icon.svg';
+  import icon from './resources/icons/claude-code-guide-icon.svg';
 
 FOR CSS BACKGROUND:
-  background-image: url('resources/icons/claude-howto-icon.svg');
+  background-image: url('resources/icons/claude-code-guide-icon.svg');
 
 ═════════════════════════════════════════════════════════════════════════════
 
@@ -96,11 +96,11 @@ FOR CSS BACKGROUND:
 
 USE CASE                    FILE                        SIZE
 ─────────────────────────────────────────────────────────────────────────────
-Website header              logos/claude-howto-logo.svg     800×200px
+Website header              logos/claude-code-guide-logo.svg     800×200px
 Browser tab                 favicons/favicon-32.svg         32×32px
 Mobile home screen          favicons/favicon-128.svg        128×128px
-App icon                    icons/claude-howto-icon.svg     256×256px
-Social media thumbnail      icons/claude-howto-icon.svg     256×256px
+App icon                    icons/claude-code-guide-icon.svg     256×256px
+Social media thumbnail      icons/claude-code-guide-icon.svg     256×256px
 Bookmark/favorite icon      favicons/favicon-64.svg         64×64px
 Apple touch icon            favicons/favicon-128.svg        128×128px
 PWA/Android app             favicons/favicon-256.svg        256×256px
@@ -111,8 +111,8 @@ Old browsers (fallback)     favicons/favicon-16.svg         16×16px
 ✅ 校验清单
 
 SVG Assets:
-  ✓ logos/claude-howto-logo.svg       主 Logo
-  ✓ icons/claude-howto-icon.svg       应用图标
+  ✓ logos/claude-code-guide-logo.svg       主 Logo
+  ✓ icons/claude-code-guide-icon.svg       应用图标
   ✓ favicons/favicon-16.svg           16px favicon
   ✓ favicons/favicon-32.svg           32px favicon
   ✓ favicons/favicon-64.svg           64px favicon

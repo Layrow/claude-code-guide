@@ -89,7 +89,7 @@ class TestEPUBConfig:
             output_path=tmp_path / "out.epub",
         )
         assert config.identifier == "claude-code-guide"
-        assert config.title == "Claude Code How-To Guide"
+        assert config.title == "Claude Code Guide"
         assert config.language == "en"
         assert config.author == "Claude Code Community"
         assert config.request_timeout == 30.0

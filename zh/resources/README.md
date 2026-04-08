@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="logos/claude-code-guide-logo.svg">
 </picture>
 
 # Claude Code Guide - 品牌资源
@@ -12,11 +12,11 @@
 ```
 resources/
 ├── logos/
-│   ├── claude-howto-logo.svg       # 主 Logo - Light mode（520×120px）
-│   └── claude-howto-logo-dark.svg  # 主 Logo - Dark mode（520×120px）
+│   ├── claude-code-guide-logo.svg       # 主 Logo - Light mode（520×120px）
+│   └── claude-code-guide-logo-dark.svg  # 主 Logo - Dark mode（520×120px）
 ├── icons/
-│   ├── claude-howto-icon.svg       # 应用图标 - Light mode（256×256px）
-│   └── claude-howto-icon-dark.svg  # 应用图标 - Dark mode（256×256px）
+│   ├── claude-code-guide-icon.svg       # 应用图标 - Light mode（256×256px）
+│   └── claude-code-guide-icon-dark.svg  # 应用图标 - Dark mode（256×256px）
 └── favicons/
     ├── favicon-16.svg              # Favicon - 16×16px
     ├── favicon-32.svg              # Favicon - 32×32px（主版本）
@@ -51,8 +51,8 @@ assets/logo/
 ### Logos
 
 **文件：**
-- `logos/claude-howto-logo.svg`（Light mode）
-- `logos/claude-howto-logo-dark.svg`（Dark mode）
+- `logos/claude-code-guide-logo.svg`（Light mode）
+- `logos/claude-code-guide-logo-dark.svg`（Dark mode）
 
 **规格：**
 - **尺寸：** 520×120 px
@@ -68,8 +68,8 @@ assets/logo/
 ### Icons
 
 **文件：**
-- `icons/claude-howto-icon.svg`（Light mode）
-- `icons/claude-howto-icon-dark.svg`（Dark mode）
+- `icons/claude-code-guide-icon.svg`（Light mode）
+- `icons/claude-code-guide-icon-dark.svg`（Dark mode）
 
 **规格：**
 - **尺寸：** 256×256 px

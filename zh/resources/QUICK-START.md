@@ -26,17 +26,17 @@ cp resources/favicons/* /path/to/your/website/public/
 ```markdown
 # Claude Code Guide
 
-![Claude Code Guide Logo](logos/claude-howto-logo.svg)
+![Claude Code Guide Logo](logos/claude-code-guide-logo.svg)
 
-![Icon](icons/claude-howto-icon.svg)
+![Icon](icons/claude-code-guide-icon.svg)
 ```
 
 ## 推荐尺寸
 
 | Purpose | Size | File |
 |---------|------|------|
-| 网站头部 | 520×120 | `logos/claude-howto-logo.svg` |
-| 应用图标 | 256×256 | `icons/claude-howto-icon.svg` |
+| 网站头部 | 520×120 | `logos/claude-code-guide-logo.svg` |
+| 应用图标 | 256×256 | `icons/claude-code-guide-icon.svg` |
 | 浏览器标签页 | 32×32 | `favicons/favicon-32.svg` |
 | 手机主屏图标 | 128×128 | `favicons/favicon-128.svg` |
 | 桌面应用 | 256×256 | `favicons/favicon-256.svg` |
@@ -67,17 +67,17 @@ cp resources/favicons/* /path/to/your/website/public/
 ## 什么场景该用什么
 
 ### Website
-- **Header**：Logo（`logos/claude-howto-logo.svg`）
+- **Header**：Logo（`logos/claude-code-guide-logo.svg`）
 - **Favicon**：32px（`favicons/favicon-32.svg`）
-- **Social preview**：Icon（`icons/claude-howto-icon.svg`）
+- **Social preview**：Icon（`icons/claude-code-guide-icon.svg`）
 
 ### GitHub
-- **README badge**：64-128px 的 Icon（`icons/claude-howto-icon.svg`）
-- **Repository avatar**：Icon（`icons/claude-howto-icon.svg`）
+- **README badge**：64-128px 的 Icon（`icons/claude-code-guide-icon.svg`）
+- **Repository avatar**：Icon（`icons/claude-code-guide-icon.svg`）
 
 ### Social Media
-- **Profile picture**：Icon（`icons/claude-howto-icon.svg`）
-- **Banner**：Logo（`logos/claude-howto-logo.svg`）
+- **Profile picture**：Icon（`icons/claude-code-guide-icon.svg`）
+- **Banner**：Logo（`logos/claude-code-guide-logo.svg`）
 - **Thumbnail**：256×256px 的 Icon
 
 ### Documentation

@@ -3,7 +3,7 @@
 # dependencies = ["ebooklib", "markdown", "beautifulsoup4", "httpx", "pillow", "tenacity"]
 # ///
 """
-Build an EPUB from the Claude How-To markdown files.
+Build an EPUB from the Claude Code Guide markdown files.
 
 Usage:
     Run from the repository root directory:
@@ -37,7 +37,7 @@ Features:
 Requirements:
     - uv (recommended) or Python 3.10+ with dependencies installed
     - Internet connection for Mermaid diagram rendering
-    - Repository structure with markdown files and claude-howto-logo.png
+    - Repository structure with markdown files and claude-code-guide-logo.png
 """
 
 from __future__ import annotations
@@ -112,12 +112,12 @@ class EPUBConfig:
 
     # EPUB Metadata
     identifier: str = "claude-code-guide"
-    title: str = "Claude Code How-To Guide"
+    title: str = "Claude Code Guide"
     language: str = "en"
     author: str = "Claude Code Community"
 
     # Language-specific metadata
-    en_title: str = "Claude Code How-To Guide"
+    en_title: str = "Claude Code Guide"
     en_subtitle: str = "Master Claude Code in a Weekend"
 
     # Cover Settings
@@ -226,9 +226,9 @@ def validate_inputs(config: EPUBConfig, logger: logging.Logger) -> None:
         errors.append(f"Output directory is not writable: {output_dir}")
 
     # Check logo if specified
-    logo_path = config.logo_path or (config.root_path / "claude-howto-logo.png")
+    logo_path = config.logo_path or (config.root_path / "claude-code-guide-logo.png")
     if not logo_path.exists():
-        fallback_logo = config.root_path.parent / "claude-howto-logo.png"
+        fallback_logo = config.root_path.parent / "claude-code-guide-logo.png"
         if fallback_logo.exists():
             logo_path = fallback_logo
     if not logo_path.exists():
@@ -611,7 +611,7 @@ def create_cover_image(
         subtitle_font = load_font(config.subtitle_font_paths, 24, logger)
 
         # Add logo if available
-        logo_path = config.logo_path or (config.root_path / "claude-howto-logo.png")
+        logo_path = config.logo_path or (config.root_path / "claude-code-guide-logo.png")
         if logo_path.exists():
             _add_logo_to_cover(cover, logo_path, config, logger)
         else:
@@ -1047,7 +1047,7 @@ def create_epub(root_path: Path, output_path: Path, verbose: bool = False) -> Pa
 def infer_language_from_root(root_path: Path) -> tuple[str, str]:
     """Infer language metadata from the selected root path."""
     if root_path.name == "zh":
-        return "zh", "Claude Code How-To Guide (Chinese)"
+        return "zh", "Claude Code Guide (Chinese)"
     return "en", EPUBConfig.en_title
 
 
@@ -1059,7 +1059,7 @@ def infer_language_from_root(root_path: Path) -> tuple[str, str]:
 def main() -> int:
     """Main entry point with CLI argument parsing."""
     parser = argparse.ArgumentParser(
-        description="Build an EPUB from Claude How-To markdown files."
+        description="Build an EPUB from Claude Code Guide markdown files."
     )
     parser.add_argument(
         "--root",

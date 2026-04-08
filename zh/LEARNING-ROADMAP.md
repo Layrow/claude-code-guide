@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-code-guide-logo.svg">
 </picture>
 
 # 📚 Claude Code 学习路线图
@@ -739,7 +739,7 @@ done
 ---
 
 **Last Updated**：2026 年 3 月
-**Maintained by**：Claude How-To Contributors
+**Maintained by**：Claude Code Guide Contributors
 **License**：可自由使用与改造，供学习用途
 
 ---

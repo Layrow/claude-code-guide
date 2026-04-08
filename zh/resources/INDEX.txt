@@ -18,12 +18,12 @@ resources/
 │   └─ 视觉识别、色彩系统、排版、效果
 │
 ├── 📁 logos/
-│   └─ 📊 claude-howto-logo.svg（800×200px）
+│   └─ 📊 claude-code-guide-logo.svg（800×200px）
 │       → 带终端图形的主横向 Logo
 │       → 适合：Header、营销物料、印刷
 │
 ├── 📁 icons/
-│   └─ 🔷 claude-howto-icon.svg（256×256px）
+│   └─ 🔷 claude-code-guide-icon.svg（256×256px）
 │       → 应用图标
 │       → 适合：应用、头像、缩略图
 │
@@ -41,8 +41,8 @@ resources/
 
 FILE                          SIZE        USE CASE
 ────────────────────────────────────────────────────────────────────────────
-logos/claude-howto-logo.svg   800×200px   网站头部、营销物料
-icons/claude-howto-icon.svg   256×256px   应用图标、头像、社交媒体
+logos/claude-code-guide-logo.svg   800×200px   网站头部、营销物料
+icons/claude-code-guide-icon.svg   256×256px   应用图标、头像、社交媒体
 favicons/favicon-32.svg       32×32px     浏览器 favicon（主版本）
 favicons/favicon-16.svg       16×16px     浏览器标签页（旧浏览器）
 favicons/favicon-64.svg       64×64px     书签、高 DPI
@@ -119,8 +119,8 @@ Near Black          #0A0A0A     10, 10, 10      深色背景
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 STEP 1: 选择你的使用场景
-   • 网站？→ 使用 logos/claude-howto-logo.svg
-   • App / Avatar？→ 使用 icons/claude-howto-icon.svg
+   • 网站？→ 使用 logos/claude-code-guide-logo.svg
+   • App / Avatar？→ 使用 icons/claude-code-guide-icon.svg
    • 浏览器？→ 使用 favicons/favicon-32.svg
 
 STEP 2: 读对文档
@@ -139,10 +139,10 @@ STEP 3: 复制并使用
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Logos:
-  ✓ claude-howto-logo.svg（主 Logo）
+  ✓ claude-code-guide-logo.svg（主 Logo）
 
 Icons:
-  ✓ claude-howto-icon.svg（应用图标）
+  ✓ claude-code-guide-icon.svg（应用图标）
 
 Favicons（全部尺寸）：
   ✓ favicon-16.svg
@@ -177,16 +177,16 @@ Documentation:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 HTML（Web）:
-  <img src="resources/icons/claude-howto-icon.svg" alt="Claude Code Guide">
+  <img src="resources/icons/claude-code-guide-icon.svg" alt="Claude Code Guide">
 
 Markdown:
-  ![Claude Code Guide](resources/icons/claude-howto-icon.svg)
+  ![Claude Code Guide](resources/icons/claude-code-guide-icon.svg)
 
 CSS Background:
-  background-image: url('resources/icons/claude-howto-icon.svg');
+  background-image: url('resources/icons/claude-code-guide-icon.svg');
 
 React/JSX:
-  import logo from './resources/icons/claude-howto-icon.svg';
+  import logo from './resources/icons/claude-code-guide-icon.svg';
   <img src={logo} alt="Claude Code Guide" />
 
 Next.js/Web Framework:

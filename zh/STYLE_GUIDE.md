@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-code-guide-logo.svg">
 </picture>
 
 # 风格指南
@@ -55,7 +55,7 @@
 | **Config file** | 标准命名 | `.mcp.json`、`settings.json` |
 | **Memory file** | 带作用域前缀 | `project-CLAUDE.md`、`personal-CLAUDE.md` |
 | **Top-level docs** | UPPER_CASE `.md` | `CATALOG.md`、`QUICK_REFERENCE.md`、`CONTRIBUTING.md` |
-| **Image assets** | Kebab-case | `pr-slash-command.png`、`claude-howto-logo.svg` |
+| **Image assets** | Kebab-case | `pr-slash-command.png`、`claude-code-guide-logo.svg` |
 
 ### 规则
 
@@ -509,8 +509,8 @@ agent: Explore                     # Agent type for context: fork
 
 ```html
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-code-guide-logo.svg">
 </picture>
 ```
 

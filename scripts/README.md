@@ -1,11 +1,11 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../en/resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="../en/resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="../en/resources/logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="../en/resources/logos/claude-code-guide-logo.svg">
 </picture>
 
 # EPUB Builder Script
 
-Build an EPUB ebook from a selected Claude How-To language tree.
+Build an EPUB ebook from a selected Claude Code Guide language tree.
 
 ## Features
 
@@ -117,4 +117,4 @@ Managed via PEP 723 inline script metadata:
 
 **Rate limiting**: Reduce concurrent requests with `--max-concurrent 3`.
 
-**Missing logo**: The script generates a text-only cover if `claude-howto-logo.png` is not found in the selected language root or repository root.
+**Missing logo**: The script generates a text-only cover if `claude-code-guide-logo.png` is not found in the selected language root or repository root.

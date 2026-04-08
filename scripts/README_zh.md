@@ -1,11 +1,11 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="../resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="../resources/logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="../resources/logos/claude-code-guide-logo.svg">
 </picture>
 
 # EPUB 构建脚本
 
-把 Claude How-To 的 Markdown 文件构建成 EPUB 电子书。
+把 Claude Code Guide 的 Markdown 文件构建成 EPUB 电子书。
 
 ## 功能
 
@@ -117,4 +117,4 @@ uv run --with pytest --with pytest-asyncio \
 
 **被限流**：通过 `--max-concurrent 3` 降低并发请求数。
 
-**缺少 Logo**：如果找不到 `claude-howto-logo.png`，脚本会生成一个纯文字封面。
+**缺少 Logo**：如果找不到 `claude-code-guide-logo.png`，脚本会生成一个纯文字封面。

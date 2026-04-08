@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-code-guide-logo-dark.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-code-guide-logo.svg">
 </picture>
 
 # 📚 Claude Code Learning Roadmap
@@ -739,7 +739,7 @@ Once you've completed all milestones:
 ---
 
 **Last Updated**: March 2026
-**Maintained by**: Claude How-To Contributors
+**Maintained by**: Claude Code Guide Contributors
 **License**: Educational purposes, free to use and adapt
 
 ---

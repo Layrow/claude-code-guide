@@ -146,8 +146,8 @@ jobs:
         run: uv run mypy scripts/ --ignore-missing-imports --no-implicit-optional
         continue-on-error: true
 
-  build-epub:
-    name: Build EPUB Artifact
+  build-epub-en:
+    name: Build English EPUB Artifact
     runs-on: ubuntu-latest
     needs: [pytest, lint, security]
     if: success()
@@ -167,30 +167,72 @@ jobs:
           uv venv
           uv pip install -r scripts/requirements-dev.txt
 
-      - name: Build EPUB
+      - name: Build English EPUB
         run: uv run scripts/build_epub.py --root en
 
-      - name: Verify EPUB Created
+      - name: Verify English EPUB Created
         run: |
-          if [ -f claude-howto-guide-en.epub ]; then
+          if [ -f claude-code-guide-en.epub ]; then
             echo "✅ EPUB built successfully"
-            ls -lh claude-howto-guide-en.epub
+            ls -lh claude-code-guide-en.epub
           else
             echo "❌ EPUB file not found!"
             exit 1
           fi
 
-      - name: Upload EPUB Artifact
+      - name: Upload English EPUB Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: claude-howto-guide-en-epub
-          path: claude-howto-guide-en.epub
+          name: claude-code-guide-en-epub
+          path: claude-code-guide-en.epub
+          retention-days: 7
+          compression-level: 0
+
+  build-epub-zh:
+    name: Build Chinese EPUB Artifact
+    runs-on: ubuntu-latest
+    needs: [pytest, lint, security]
+    if: success()
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      - name: Create venv and install dependencies
+        run: |
+          uv venv
+          uv pip install -r scripts/requirements-dev.txt
+
+      - name: Build Chinese EPUB
+        run: uv run scripts/build_epub.py --root zh
+
+      - name: Verify Chinese EPUB Created
+        run: |
+          if [ -f claude-code-guide-zh.epub ]; then
+            echo "✅ EPUB built successfully"
+            ls -lh claude-code-guide-zh.epub
+          else
+            echo "❌ EPUB file not found!"
+            exit 1
+          fi
+
+      - name: Upload Chinese EPUB Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-code-guide-zh-epub
+          path: claude-code-guide-zh.epub
           retention-days: 7
           compression-level: 0
 
   summary:
     name: Test Summary
-    needs: [pytest, lint, security, type-check, build-epub]
+    needs: [pytest, lint, security, type-check, build-epub-en, build-epub-zh]
     runs-on: ubuntu-latest
     if: always()
 
@@ -207,17 +249,20 @@ jobs:
           echo "- **Code Quality**: ${{ needs.lint.result }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Security Scan**: ${{ needs.security.result }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Type Checking**: ${{ needs.type-check.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **EPUB Build**: ${{ needs.build-epub.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **English EPUB Build**: ${{ needs.build-epub-en.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Chinese EPUB Build**: ${{ needs.build-epub-zh.result }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "## Artifacts" >> $GITHUB_STEP_SUMMARY
           echo "- pytest-results-* (coverage and test results)" >> $GITHUB_STEP_SUMMARY
           echo "- bandit-security-report (security scan JSON)" >> $GITHUB_STEP_SUMMARY
-          echo "- claude-howto-guide-epub (built EPUB file)" >> $GITHUB_STEP_SUMMARY
+          echo "- claude-code-guide-en-epub (English EPUB artifact)" >> $GITHUB_STEP_SUMMARY
+          echo "- claude-code-guide-zh-epub (Chinese EPUB artifact)" >> $GITHUB_STEP_SUMMARY
 
       - name: Check if all tests passed
         if: |
           needs.pytest.result != 'success' ||
-          needs.build-epub.result != 'success'
+          needs.build-epub-en.result != 'success' ||
+          needs.build-epub-zh.result != 'success'
         run: |
           echo "❌ Critical tests failed"
           exit 1

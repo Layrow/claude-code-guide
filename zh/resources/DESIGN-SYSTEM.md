@@ -161,13 +161,13 @@ Center dot          | filled circle  | #22C55E (always green)
 
 ### Web Header
 - 尺寸：520×120px logo
-- 文件：`logos/claude-howto-logo.svg`
+- 文件：`logos/claude-code-guide-logo.svg`
 - 背景：白色或深色（#0A0A0A）
 - Padding：至少 20px
 
 ### App Icon
 - 尺寸：256×256px
-- 文件：`icons/claude-howto-icon.svg`
+- 文件：`icons/claude-code-guide-icon.svg`
 - 背景：白色或深色
 - 用途：应用快捷方式、头像
 
