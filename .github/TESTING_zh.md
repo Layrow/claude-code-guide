@@ -1,6 +1,6 @@
 # 测试指南
 
-本文说明 Claude How To 的测试基础设施。
+本文说明 Claude How To 的测试基础设施。用户可读文档现在放在并行的 `en/` 和 `zh/` 两棵目录树中，而验证工具仍保留在仓库根目录。
 
 ## 概述
 
@@ -40,7 +40,7 @@ source .venv/bin/activate  # macOS/Linux
 .venv\Scripts\activate     # Windows
 
 # 安装开发依赖
-uv pip install -r requirements-dev.txt
+uv pip install -r scripts/requirements-dev.txt
 ```
 
 ### 运行测试
@@ -82,10 +82,10 @@ ruff check --fix scripts/
 
 ```bash
 # 运行 Bandit 安全扫描
-bandit -c pyproject.toml -r scripts/ --exclude scripts/tests/
+bandit -c scripts/pyproject.toml -r scripts/ --exclude scripts/tests/
 
 # 生成 JSON 报告
-bandit -c pyproject.toml -r scripts/ --exclude scripts/tests/ -f json -o bandit-report.json
+bandit -c scripts/pyproject.toml -r scripts/ --exclude scripts/tests/ -f json -o bandit-report.json
 ```
 
 ### 运行类型检查
@@ -110,7 +110,7 @@ mypy scripts/ --ignore-missing-imports --no-implicit-optional
 - **运行环境**：Ubuntu latest
 - **Python 版本**：3.10、3.11、3.12
 - **执行内容**：
-  - 安装 `requirements-dev.txt` 中的依赖
+  - 安装 `scripts/requirements-dev.txt` 中的依赖
   - 使用 coverage 报告运行 pytest
   - 将覆盖率上传到 Codecov
   - 归档测试结果和 coverage HTML
@@ -155,7 +155,7 @@ mypy scripts/ --ignore-missing-imports --no-implicit-optional
 - **运行环境**：Ubuntu latest
 - **依赖**：pytest、lint、security（都必须先完成）
 - **执行内容**：
-  - 使用 `scripts/build_epub.py` 构建 EPUB
+  - 使用 `scripts/build_epub.py --root en` 构建英文 EPUB
   - 校验 EPUB 是否成功生成
   - 将 EPUB 作为 artifact 上传
 

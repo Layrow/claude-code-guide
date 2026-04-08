@@ -6,15 +6,15 @@ on:
     paths:
       - 'scripts/**'
       - '.github/workflows/test.yml'
-      - 'pyproject.toml'
-      - 'requirements*.txt'
+      - 'scripts/pyproject.toml'
+      - 'scripts/requirements*.txt'
   pull_request:
     branches: [main]
     paths:
       - 'scripts/**'
       - '.github/workflows/test.yml'
-      - 'pyproject.toml'
-      - 'requirements*.txt'
+      - 'scripts/pyproject.toml'
+      - 'scripts/requirements*.txt'
 
 # Cancel in-progress runs for the same branch
 concurrency:
@@ -113,7 +113,7 @@ jobs:
           uv pip install "bandit[toml]"
 
       - name: Run Bandit Security Scan
-        run: uv run bandit -c pyproject.toml -r scripts/ --exclude scripts/tests/ -f json -o bandit-report.json
+        run: uv run bandit -c scripts/pyproject.toml -r scripts/ --exclude scripts/tests/ -f json -o bandit-report.json
         continue-on-error: true
 
       - name: Upload security report
@@ -168,13 +168,13 @@ jobs:
           uv pip install -r scripts/requirements-dev.txt
 
       - name: Build EPUB
-        run: uv run scripts/build_epub.py
+        run: uv run scripts/build_epub.py --root en
 
       - name: Verify EPUB Created
         run: |
-          if [ -f claude-howto-guide.epub ]; then
+          if [ -f claude-howto-guide-en.epub ]; then
             echo "✅ EPUB built successfully"
-            ls -lh claude-howto-guide.epub
+            ls -lh claude-howto-guide-en.epub
           else
             echo "❌ EPUB file not found!"
             exit 1
@@ -183,8 +183,8 @@ jobs:
       - name: Upload EPUB Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: claude-howto-guide-epub
-          path: claude-howto-guide.epub
+          name: claude-howto-guide-en-epub
+          path: claude-howto-guide-en.epub
           retention-days: 7
           compression-level: 0
 

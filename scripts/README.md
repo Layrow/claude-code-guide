@@ -1,15 +1,15 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="../resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="../en/resources/logos/claude-howto-logo-dark.svg">
+  <img alt="Claude How To" src="../en/resources/logos/claude-howto-logo.svg">
 </picture>
 
 # EPUB Builder Script
 
-Build an EPUB ebook from the Claude How-To markdown files.
+Build an EPUB ebook from a selected Claude How-To language tree.
 
 ## Features
 
-- Organizes chapters by folder structure (01-slash-commands, 02-memory, etc.)
+- Organizes chapters by folder structure inside a language root (`en/` or `zh/`)
 - Renders Mermaid diagrams as PNG images via Kroki.io API
 - Async concurrent fetching - renders all diagrams in parallel
 - Generates a cover image from the project logo
@@ -26,7 +26,7 @@ Build an EPUB ebook from the Claude How-To markdown files.
 
 ```bash
 # Simplest way - uv handles everything
-uv run scripts/build_epub.py
+uv run scripts/build_epub.py --root en
 ```
 
 ## Development Setup
@@ -37,13 +37,13 @@ uv venv
 
 # Activate and install dependencies
 source .venv/bin/activate
-uv pip install -r requirements-dev.txt
+uv pip install -r scripts/requirements-dev.txt
 
 # Run tests
 pytest scripts/tests/ -v
 
 # Run the script
-python scripts/build_epub.py
+python scripts/build_epub.py --root en
 ```
 
 ## Command-Line Options
@@ -54,8 +54,8 @@ usage: build_epub.py [-h] [--root ROOT] [--output OUTPUT] [--verbose]
 
 options:
   -h, --help            show this help message and exit
-  --root, -r ROOT       Root directory (default: repo root)
-  --output, -o OUTPUT   Output path (default: claude-howto-guide.epub)
+  --root, -r ROOT       Language root directory (default: en/)
+  --output, -o OUTPUT   Output path (default: claude-howto-guide-en.epub or claude-howto-guide-zh.epub)
   --verbose, -v         Enable verbose logging
   --timeout TIMEOUT     API timeout in seconds (default: 30)
   --max-concurrent N    Max concurrent requests (default: 10)
@@ -65,18 +65,18 @@ options:
 
 ```bash
 # Build with verbose output
-uv run scripts/build_epub.py --verbose
+uv run scripts/build_epub.py --root en --verbose
 
 # Custom output location
-uv run scripts/build_epub.py --output ~/Desktop/claude-guide.epub
+uv run scripts/build_epub.py --root zh --output ~/Desktop/claude-guide-zh.epub
 
 # Limit concurrent requests (if rate-limited)
-uv run scripts/build_epub.py --max-concurrent 5
+uv run scripts/build_epub.py --root en --max-concurrent 5
 ```
 
 ## Output
 
-Creates `claude-howto-guide.epub` in the repository root directory.
+Creates a language-specific EPUB in the repository root directory, for example `claude-howto-guide-en.epub`.
 
 The EPUB includes:
 - Cover image with project logo
@@ -117,4 +117,4 @@ Managed via PEP 723 inline script metadata:
 
 **Rate limiting**: Reduce concurrent requests with `--max-concurrent 3`.
 
-**Missing logo**: The script generates a text-only cover if `claude-howto-logo.png` is not found.
+**Missing logo**: The script generates a text-only cover if `claude-howto-logo.png` is not found in the selected language root or repository root.

@@ -6,7 +6,7 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 Codex How To is a tutorial repository for Codex features. This is **documentation-as-code** — the primary output is markdown files organized into numbered learning modules, not an executable application.
 
-**Architecture**: Each module (01-10) covers a specific Codex feature with copy-paste templates, Mermaid diagrams, and examples. The build system validates documentation quality and generates an EPUB ebook.
+**Architecture**: Documentation is split into parallel `en/` and `zh/` trees. Each module (01-10) covers a specific Codex feature with copy-paste templates, Mermaid diagrams, and examples. The build system validates documentation quality and generates EPUB ebooks from a selected language root.
 
 ## Common Commands
 
@@ -81,26 +81,41 @@ mypy scripts/ --ignore-missing-imports
 ### EPUB Build
 
 ```bash
-# Generate ebook (renders Mermaid diagrams via Kroki.io API)
-uv run scripts/build_epub.py
+# Generate English ebook (renders Mermaid diagrams via Kroki.io API)
+uv run scripts/build_epub.py --root en
+
+# Generate Chinese ebook
+uv run scripts/build_epub.py --root zh
 
 # With options
-uv run scripts/build_epub.py --verbose --output custom-name.epub --max-concurrent 5
+uv run scripts/build_epub.py --root en --verbose --output custom-name.epub --max-concurrent 5
 ```
 
 ## Directory Structure
 
 ```
-├── 01-slash-commands/      # User-invoked shortcuts
-├── 02-memory/              # Persistent context examples
-├── 03-skills/              # Reusable capabilities
-├── 04-subagents/           # Specialized AI assistants
-├── 05-mcp/                 # Model Context Protocol examples
-├── 06-hooks/               # Event-driven automation
-├── 07-plugins/             # Bundled features
-├── 08-checkpoints/         # Session snapshots
-├── 09-advanced-features/   # Planning, thinking, backgrounds
-├── 10-cli/                 # CLI reference
+├── en/
+│   ├── 01-slash-commands/      # English slash-command lessons
+│   ├── 02-memory/              # English memory lessons
+│   ├── 03-skills/              # English skills lessons
+│   ├── 04-subagents/           # English subagent lessons
+│   ├── 05-mcp/                 # English MCP lessons
+│   ├── 06-hooks/               # English hook lessons
+│   ├── 07-plugins/             # English plugin lessons
+│   ├── 08-checkpoints/         # English checkpoint lessons
+│   ├── 09-advanced-features/   # English advanced lessons
+│   └── 10-cli/                 # English CLI reference
+├── zh/
+│   ├── 01-slash-commands/      # Chinese slash-command lessons
+│   ├── 02-memory/              # Chinese memory lessons
+│   ├── 03-skills/              # Chinese skills lessons
+│   ├── 04-subagents/           # Chinese subagent lessons
+│   ├── 05-mcp/                 # Chinese MCP lessons
+│   ├── 06-hooks/               # Chinese hook lessons
+│   ├── 07-plugins/             # Chinese plugin lessons
+│   ├── 08-checkpoints/         # Chinese checkpoint lessons
+│   ├── 09-advanced-features/   # Chinese advanced lessons
+│   └── 10-cli/                 # Chinese CLI reference
 ├── scripts/
 │   ├── build_epub.py           # EPUB generator (renders Mermaid via Kroki API)
 │   ├── check_cross_references.py   # Validates internal links
@@ -114,7 +129,7 @@ uv run scripts/build_epub.py --verbose --output custom-name.epub --max-concurren
 ## Content Guidelines
 
 ### Module Structure
-Each numbered folder follows the pattern:
+Each numbered folder in `en/` and `zh/` follows the pattern:
 - **README.md** — Overview of the feature with examples
 - **Example files** — Copy-paste templates (`.md` for commands, `.json` for configs, `.sh` for hooks)
 - Files are organized by feature complexity and dependencies
@@ -125,7 +140,7 @@ Each numbered folder follows the pattern:
 - Use Mermaid for flowcharts, sequence diagrams, and architecture visuals
 
 ### Cross-References
-- Use relative paths for internal links (e.g., `(01-slash-commands/README.md)`)
+- Use relative paths for internal links within a language tree (e.g., `(01-slash-commands/README.md)` from inside `en/README.md`)
 - Code fences must specify language (e.g., ` ```bash `, ` ```python `)
 - Anchor links use `#heading-name` format
 
@@ -136,9 +151,9 @@ Each numbered folder follows the pattern:
 
 ## Key Architecture Points
 
-1. **Numbered folders indicate learning order** — The 01-10 prefix represents the recommended sequence for learning Codex features. This numbering is intentional; do not reorganize alphabetically.
+1. **Numbered folders indicate learning order** — The `01`-`10` prefix inside both `en/` and `zh/` represents the recommended sequence for learning Codex features. This numbering is intentional; do not reorganize alphabetically.
 
-2. **Scripts are utilities, not the product** — The Python scripts in `scripts/` support documentation quality and EPUB generation. The actual content is in the numbered module folders.
+2. **Scripts are utilities, not the product** — The Python scripts in `scripts/` support documentation quality and EPUB generation. The actual content is in the `en/` and `zh/` documentation trees.
 
 3. **Pre-commit is the gatekeeper** — All four quality checks must pass before a PR is accepted. The CI pipeline runs these same checks as a second pass.
 

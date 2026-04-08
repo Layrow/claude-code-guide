@@ -1,6 +1,6 @@
 # Testing Guide
 
-This document describes the testing infrastructure for Claude How To.
+This document describes the testing infrastructure for Claude How To. User-facing docs now live in parallel `en/` and `zh/` trees, while validation tooling remains at the repository root.
 
 ## Overview
 
@@ -40,7 +40,7 @@ source .venv/bin/activate  # macOS/Linux
 .venv\Scripts\activate     # Windows
 
 # Install development dependencies
-uv pip install -r requirements-dev.txt
+uv pip install -r scripts/requirements-dev.txt
 ```
 
 ### Run Tests
@@ -82,10 +82,10 @@ ruff check --fix scripts/
 
 ```bash
 # Run Bandit security scan
-bandit -c pyproject.toml -r scripts/ --exclude scripts/tests/
+bandit -c scripts/pyproject.toml -r scripts/ --exclude scripts/tests/
 
 # Generate JSON report
-bandit -c pyproject.toml -r scripts/ --exclude scripts/tests/ -f json -o bandit-report.json
+bandit -c scripts/pyproject.toml -r scripts/ --exclude scripts/tests/ -f json -o bandit-report.json
 ```
 
 ### Run Type Checking
@@ -110,7 +110,7 @@ mypy scripts/ --ignore-missing-imports --no-implicit-optional
 - **Runs on**: Ubuntu latest
 - **Python versions**: 3.10, 3.11, 3.12
 - **What it does**:
-  - Installs dependencies from `requirements-dev.txt`
+  - Installs dependencies from `scripts/requirements-dev.txt`
   - Runs pytest with coverage reporting
   - Uploads coverage to Codecov
   - Archives test results and coverage HTML
@@ -155,7 +155,7 @@ mypy scripts/ --ignore-missing-imports --no-implicit-optional
 - **Runs on**: Ubuntu latest
 - **Depends on**: pytest, lint, security (all must pass)
 - **What it does**:
-  - Builds the EPUB file using `scripts/build_epub.py`
+  - Builds the English EPUB using `scripts/build_epub.py --root en`
   - Verifies the EPUB was created successfully
   - Uploads EPUB as artifact
 
@@ -268,7 +268,7 @@ Configured hooks in `.pre-commit-config.yaml`:
 
 Common causes:
 1. **Python version difference**: CI uses 3.10, 3.11, 3.12
-2. **Missing dependencies**: Update `requirements-dev.txt`
+2. **Missing dependencies**: Update `scripts/requirements-dev.txt`
 3. **Platform differences**: Path separators, environment variables
 4. **Flaky tests**: Tests that depend on timing or order
 
@@ -280,13 +280,13 @@ uv python install 3.10 3.11 3.12
 # Test with clean environment
 rm -rf .venv
 uv venv
-uv pip install -r requirements-dev.txt
+uv pip install -r scripts/requirements-dev.txt
 pytest scripts/tests/
 ```
 
 ### Bandit Reports False Positives
 
-Some security warnings may be false positives. Configure in `pyproject.toml`:
+Some security warnings may be false positives. Configure in `scripts/pyproject.toml`:
 
 ```toml
 [tool.bandit]
