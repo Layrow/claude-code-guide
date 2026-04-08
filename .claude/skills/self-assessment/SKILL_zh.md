@@ -18,7 +18,7 @@ description: 全面的 Claude Code 自我评估与学习路径顾问。它会运
 - **Quick Assessment** — "8 questions, ~2 minutes. Determines your overall level (Beginner/Intermediate/Advanced) and gives a learning path."
 - **Deep Assessment** — "5 categories with detailed questions, ~5 minutes. Gives per-topic skill scores, identifies specific gaps, and builds a prioritized learning path."
 
-如果用户选择 **Quick Assessment**，进入 Step 2A。  
+如果用户选择 **Quick Assessment**，进入 Step 2A。
 如果用户选择 **Deep Assessment**，进入 Step 2B。
 
 ---
@@ -388,9 +388,9 @@ Based on your gaps, try these real-world exercises to solidify your learning:
 - **Practice project** — "Set up a practice project that covers my gap areas"
 - **Retake assessment** — "I want to retake the quiz (maybe the other mode)"
 
-如果选择 **Start learning**：读取学习路径中第一个缺口教程的 README.md，并带用户完成第一项练习。  
-如果选择 **Deep dive on a gap**：先询问要深入哪一项缺口，再读取相应教程 README.md，并配合示例讲解关键概念。  
-如果选择 **Practice project**：设计一个结合 2-3 个薄弱项的小项目，并给出具体步骤。  
+如果选择 **Start learning**：读取学习路径中第一个缺口教程的 README.md，并带用户完成第一项练习。
+如果选择 **Deep dive on a gap**：先询问要深入哪一项缺口，再读取相应教程 README.md，并配合示例讲解关键概念。
+如果选择 **Practice project**：设计一个结合 2-3 个薄弱项的小项目，并给出具体步骤。
 如果选择 **Retake assessment**：回到 Step 1。
 
 ## Error Handling

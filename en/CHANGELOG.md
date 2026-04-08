@@ -19,7 +19,7 @@
 - Add missing cSpell words and README sections for CI compliance (93f9d51) @luongnv89
 - Add `Sandboxing` to cSpell dictionary (b80ce6f) @luongnv89
 
-**Full Changelog**: https://github.com/Layrow/claude-code-guide/compare/v2.1.1...v2.2.0
+**Full Changelog**: See the commit history in this repository fork.
 
 ---
 
@@ -30,7 +30,7 @@
 - Remove dead marketplace link failing CI link checks (3fdf0d6) @luongnv89
 - Add `sandboxed` and `pycache` to cSpell dictionary (dc64618) @luongnv89
 
-**Full Changelog**: https://github.com/Layrow/claude-code-guide/compare/v2.1.0...v2.1.1
+**Full Changelog**: See the commit history in this repository fork.
 
 ---
 
@@ -64,7 +64,7 @@
 
 - @VikalpP made their first contribution in #7
 
-**Full Changelog**: https://github.com/Layrow/claude-code-guide/compare/v2.0.0...v2.1.0
+**Full Changelog**: See the commit history in this repository fork.
 
 ---
 
@@ -106,4 +106,4 @@
 - Remove fictional configuration fields across multiple files
 - Update all "Last Updated" dates to February 2026
 
-**Full Changelog**: https://github.com/Layrow/claude-code-guide/compare/20779db...v2.0.0
+**Full Changelog**: See the commit history in this repository fork.

@@ -94,7 +94,7 @@ def main() -> int:
     # Support both legacy root-level layout and the current en/ + zh/ layout.
     lesson_roots = [Path("en"), Path("zh")]
     if not any(root.exists() for root in lesson_roots):
-        lesson_roots = [Path(".")]
+        lesson_roots = [Path()]
 
     for lesson_root in lesson_roots:
         for i in range(1, 11):

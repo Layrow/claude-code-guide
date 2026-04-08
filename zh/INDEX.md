@@ -874,9 +874,9 @@ Run tests in background
 
 ---
 
-**Last Updated**：2026 年 3 月  
-**Total Examples**：100+ 个文件  
-**Categories**：10 个功能分类  
-**Hooks**：8 个自动化脚本  
-**Configuration Examples**：10+ 个场景  
+**Last Updated**：2026 年 3 月
+**Total Examples**：100+ 个文件
+**Categories**：10 个功能分类
+**Hooks**：8 个自动化脚本
+**Configuration Examples**：10+ 个场景
 **Ready to Use**：全部示例可直接使用

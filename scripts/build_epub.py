@@ -611,7 +611,9 @@ def create_cover_image(
         subtitle_font = load_font(config.subtitle_font_paths, 24, logger)
 
         # Add logo if available
-        logo_path = config.logo_path or (config.root_path / "claude-code-guide-logo.png")
+        logo_path = config.logo_path or (
+            config.root_path / "claude-code-guide-logo.png"
+        )
         if logo_path.exists():
             _add_logo_to_cover(cover, logo_path, config, logger)
         else:
@@ -704,7 +706,7 @@ def handle_svg_image(
         svg_path = (root_path / src).resolve()
     if not svg_path.is_file():
         logger.warning(f"SVG file not found: {src}")
-        return f'<p><em>[SVG not found: {html.escape(src)}]</em></p>'
+        return f"<p><em>[SVG not found: {html.escape(src)}]</em></p>"
 
     svg_key = str(svg_path)
 
@@ -1100,7 +1102,9 @@ def main() -> int:
     default_output_name = (
         "claude-code-guide-zh.epub" if language == "zh" else "claude-code-guide-en.epub"
     )
-    output = (args.output if args.output else (repo_root / default_output_name)).resolve()
+    output = (
+        args.output if args.output else (repo_root / default_output_name)
+    ).resolve()
 
     logger = setup_logging(args.verbose)
     config = EPUBConfig(

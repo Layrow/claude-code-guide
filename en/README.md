@@ -103,7 +103,6 @@ Run `/lesson-quiz [topic]` after each module. The quiz pinpoints what you missed
 - **Actively maintained** — synced with every Claude Code release (latest: v2.2.0, March 2026)
 - **Community-driven** — contributions from developers who share their real-world configurations
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Layrow/claude-code-guide&type=Date)](https://star-history.com/#Layrow/claude-code-guide&Date)
 
 ---
 
@@ -865,8 +864,8 @@ Thanks to everyone who has contributed to this project!
 
 | Contributor | PRs |
 |-------------|-----|
-| [wjhrdy](https://github.com/wjhrdy) | [#1 - add a tool to create an epub](https://github.com/Layrow/claude-code-guide/pull/1) |
-| [VikalpP](https://github.com/VikalpP) | [#7 - fix(docs): Use tilde fences for nested code blocks in concepts guide](https://github.com/Layrow/claude-code-guide/pull/7) |
+| [wjhrdy](https://github.com/wjhrdy) | PR #1 - add a tool to create an epub |
+| [VikalpP](https://github.com/VikalpP) | PR #7 - fix(docs): Use tilde fences for nested code blocks in concepts guide |
 
 ---
 

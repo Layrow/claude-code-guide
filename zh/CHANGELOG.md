@@ -19,7 +19,7 @@
 - 为满足 CI 要求，补充缺失的 cSpell 单词和 README 章节（93f9d51） @luongnv89
 - 将 `Sandboxing` 添加到 cSpell 词典中（b80ce6f） @luongnv89
 
-**完整更新日志**：https://github.com/Layrow/claude-code-guide/compare/v2.1.1...v2.2.0
+**完整更新日志**：请查看此 fork 仓库中的提交历史。
 
 ---
 
@@ -30,7 +30,7 @@
 - 移除导致 CI 链接检查失败的失效 marketplace 链接（3fdf0d6） @luongnv89
 - 将 `sandboxed` 和 `pycache` 添加到 cSpell 词典中（dc64618） @luongnv89
 
-**完整更新日志**：https://github.com/Layrow/claude-code-guide/compare/v2.1.0...v2.1.1
+**完整更新日志**：请查看此 fork 仓库中的提交历史。
 
 ---
 
@@ -64,7 +64,7 @@
 
 - @VikalpP 在 #7 中完成了首次贡献
 
-**完整更新日志**：https://github.com/Layrow/claude-code-guide/compare/v2.0.0...v2.1.0
+**完整更新日志**：请查看此 fork 仓库中的提交历史。
 
 ---
 
@@ -106,4 +106,4 @@
 - 在多个文件中移除虚构配置字段
 - 将所有 “Last Updated” 日期更新为 2026 年 2 月
 
-**完整更新日志**：https://github.com/Layrow/claude-code-guide/compare/20779db...v2.0.0
+**完整更新日志**：请查看此 fork 仓库中的提交历史。
