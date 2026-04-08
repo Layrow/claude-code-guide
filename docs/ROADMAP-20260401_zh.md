@@ -1,0 +1,153 @@
+# 路线图：claude-howto 2026–2027
+
+> 2026 年 4 月 – 2027 年 3 月 · 双层知识库 | 完整计划：`TASKS-20260401.md`
+
+---
+
+## 愿景
+
+把 claude-howto 从一个静态教程仓库，升级为一个**持续演进、面向双重受众的知识系统**：
+
+- **面向人类**：通过渐进难度、决策树和可被专家收藏的命名模式，提供交互式、场景化学习体验
+- **面向 AI agents**：提供结构化元数据索引，让 agents 在执行 Claude Code 任务前先查询这个仓库，使它成为基础设施，而不只是内容集合
+
+目前没有竞争对手把 AI agents 当作主要受众。这就是护城河。
+
+---
+
+## 七大支柱
+
+| # | Pillar | What it delivers |
+|---|--------|-----------------|
+| P1 | Fun Layer | 每个模块都加入场景化引导和 "Try It Now" 区块 |
+| P2 | AI Agent Index | 生成 `agent-manifest.json` + `AGENT-INDEX.md` + 查询 skill |
+| P3a | Expert Reference (in-module) | 每个模块内提供决策树 + 命名模式 |
+| P3b | Expert Reference (cross-module) | `RECIPES.md` —— 多特性组合工作流 |
+| P4 | Newcomer Onboarding | `quickstart.sh` + `QUICKSTART.md` + 难度徽章 |
+| P5 | Community Showcase | `COMMUNITY-PROJECTS.md` —— 精选用户项目 |
+| P6 | Content Quality | 扩展最薄弱的模块；完善项目级 `CLAUDE.md` |
+| P7 | Living Curriculum | `WHATS-NEW.md` + 版本徽章 + 每周内容陈旧度 CI 动作 |
+
+---
+
+## 时间线总览
+
+```
+Apr 2026   May–Jun 2026   Jul–Aug 2026   Sep 2026   Oct–Nov 2026   Dec 2026–Mar 2027
+   |             |              |             |             |               |
+  [M1]          [M2]           [M3]          [M4]          [M5]            [M6]
+基础设施         6/10 模块      10/10         Agent 层       版本审计        自运转体系
++ hooks/checks  完成           完成          + recipes      完成            成型
+```
+
+---
+
+## 里程碑
+
+### M1 — 基础设施上线 · 2026 年 4 月底
+
+**交付内容：**
+- `scripts/quickstart.sh` —— 面向新用户的一键安装脚本（幂等）
+- `QUICKSTART.md` —— “前 15 分钟上手”可视化指南
+- 10 个模块全部加入难度徽章和 “What you'll build” 预览
+- `WHATS-NEW.md` + 所有模块的版本徽章
+- `.github/workflows/staleness-check.yml` —— 每周一检查，若模块 30+ 天未验证则自动提 issue
+- 根级 `CLAUDE.md` —— 作为最佳实践示例的项目自用配置
+- `scripts/build-agent-index.py` —— 读取全部 10 个模块，输出 `agent-manifest.json` + `AGENT-INDEX.md`
+- **06-hooks** —— 完整深度升级：5 个完整 hook 脚本、决策树、Try It Now、patterns
+- **08-checkpoints** —— 完整深度升级：311 行扩充到 800+ 行，3 个工作流模板、决策树、patterns
+
+**为什么从这里开始：** 基础设施会让后续所有阶段受益。Hooks 和 checkpoints 是最薄弱的模块，也最容易让新访客流失。
+
+---
+
+### M2 — 完成 6/10 模块 · 2026 年 6 月底
+
+**交付内容（每个模块做一次深度升级）：**
+- **01-slash-commands** —— 场景化引导、决策树、Try It Now、命名模式
+- **02-memory** —— 场景化引导、决策树、Try It Now、命名模式
+- **03-skills** —— 场景化引导、决策树、Try It Now、命名模式
+- **10-cli** —— 场景化引导、决策树、Try It Now、命名模式
+- CI 步骤：每次 push 都校验 `agent-manifest.json` schema
+
+每次模块升级后，都要运行生成器确认 manifest 输出合法。
+
+---
+
+### M3 — 10 个模块全部完成 · 2026 年 8 月底
+
+**交付内容：**
+- **04-subagents** —— 完整深度升级（包括 "The Multi-Agent Review Pattern"）
+- **05-mcp** —— 完整深度升级
+- **07-plugins** —— 完整深度升级
+- **09-advanced-features** —— 完整深度升级
+
+到这一步，每个模块都具备：场景化引导、2+ 个 Try It Now 区块、Mermaid 决策树、2+ 个命名模式。
+
+---
+
+### M4 — Agent 层上线 · 2026 年 9 月底
+
+**交付内容：**
+- 最终版 `agent-manifest.json`，覆盖 100% 模块（由完整内容生成）
+- `AGENT-INDEX.md`，并从 `README.md` 链接过去
+- `skills/claude-howto-lookup/SKILL.md` —— 查询 manifest 的轻量 agent skill
+- `RECIPES.md` —— 5+ 个复合工作流（schema：name、modules-used、problem、solution、expected outcome）
+- `COMMUNITY-PROJECTS.md` —— 基于 PR 投稿格式的静态精选列表
+
+**为什么在 9 月做：** 只有当全部 10 个模块内容完整后，agent index 才真正有意义。
+
+---
+
+### M5 — 版本审计完成 · 2026 年 11 月底
+
+**交付内容：**
+- 完成全量版本审计：10 个模块全部按当前 CC 版本验证
+- 全部模块更新 `cc_version_verified` frontmatter 和版本徽章
+- `RECIPES.md` 扩展到 8+ 条 recipes，基于观察到的社区使用模式
+- 置顶 GitHub Discussion："Share your Claude Code workflows" —— 收集 agent 使用信号
+
+---
+
+### M6 — 形成自运转体系 · 2027 年 3 月底
+
+**交付 / 持续运行内容：**
+- 每次 CC 发布后运行 `/docs-sync-claude-code` skill → 更新 `WHATS-NEW.md`
+- Agent manifest CI 回归校验：强制 100% 模块覆盖
+- `RECIPES.md` 扩展到 10+ 条 recipes
+- `COMMUNITY-PROJECTS.md` 自然持续增长
+- 对 agent 使用信号做评估；若验证成立，则推广 lookup skill（营销、asm registry）
+
+---
+
+## 交付物汇总
+
+| Deliverable | Type | Phase |
+|-------------|------|-------|
+| `scripts/quickstart.sh` | Script | P1 |
+| `QUICKSTART.md` | Doc | P1 |
+| Root `CLAUDE.md` | Config | P1 |
+| `WHATS-NEW.md` | Doc | P1 |
+| `.github/workflows/staleness-check.yml` | CI | P1 |
+| `scripts/build-agent-index.py` | Script | P1 |
+| 10 个模块的深度升级（scenario + Try It Now + decision tree + patterns） | Content | P1–P3 |
+| `agent-manifest.json`（生成） | Data | P4 |
+| `AGENT-INDEX.md`（生成） | Doc | P4 |
+| `skills/claude-howto-lookup/SKILL.md` | Skill | P4 |
+| `RECIPES.md`（5 → 8 → 10+ recipes） | Doc | P4–P6 |
+| `COMMUNITY-PROJECTS.md` | Doc | P4 |
+
+---
+
+## 不在当前范围内的内容
+
+这些内容延后到 `TODOS.md`，不要让它们在当前阶段混入：
+
+- Skill marketplace 或可安装 registry
+- 自定义网站或 dashboard
+- 完成度跟踪（cc-progress）
+- 社区教程 CI 校验
+- 自动生成 CONTRIBUTORS.md
+- 多语言翻译
+- Quiz / assessment 基础设施
+- 社区项目投票机制

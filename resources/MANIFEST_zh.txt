@@ -1,0 +1,182 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    CLAUDE HOW TO - 完整资源清单                           ║
+║                         所有文件均可直接使用                              ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📦 完整目录清单
+═════════════════════════════════════════════════════════════════════════════
+
+resources/
+│
+├─ 📄 README.md                          (6.0K) 完整文档
+├─ 📄 QUICK-START.md                     (2.5K) 复制即用的接入说明
+├─ 📄 DESIGN-SYSTEM.md                   (7.7K) 品牌指南
+├─ 📄 INDEX.txt                          (12K) 视觉参考索引
+├─ 📄 MANIFEST.txt                       (this) 文件清单
+│
+├─ 📁 logos/                             (8.0K total)
+│  └─ 📊 claude-howto-logo.svg          (8.0K) 800×200px 主 Logo
+│
+├─ 📁 icons/                             (8.0K total)
+│  └─ 🔷 claude-howto-icon.svg          (8.0K) 256×256px 应用图标
+│
+└─ 📁 favicons/                          (20K total)
+   ├─ 🔹 favicon-16.svg                 (3.2K) 16×16px 浏览器标签页
+   ├─ 🔹 favicon-32.svg                 (3.8K) 32×32px 标准 favicon
+   ├─ 🔹 favicon-64.svg                 (4.1K) 64×64px 高 DPI
+   ├─ 🔹 favicon-128.svg                (4.5K) 128×128px Apple touch
+   └─ 🔹 favicon-256.svg                (4.9K) 256×256px 现代浏览器 / PWA
+
+═════════════════════════════════════════════════════════════════════════════
+
+📊 资源摘要
+═════════════════════════════════════════════════════════════════════════════
+
+CATEGORY        COUNT   PURPOSE
+────────────────────────────────────────────────────────────────────────────
+Logos           1       用于 Header / 营销的主横向 Logo
+Icons           1       用于头像 / 缩略图的应用图标
+Favicons        5       浏览器标签页、书签、移动端图标
+Documentation   5       安装说明、设计系统、参考文档
+────────────────────────────────────────────────────────────────────────────
+TOTAL           12      完整品牌资源包
+
+═════════════════════════════════════════════════════════════════════════════
+
+📄 文档文件 - 应该先看什么
+
+1️⃣  先看这里：QUICK-START.md
+    • 可直接复制粘贴的 HTML 代码
+    • 按使用场景推荐的尺寸
+    • CSS 颜色变量
+    • 快速集成示例
+    ⏱️  5 分钟可读完
+
+2️⃣  完整说明：README.md
+    • 全部资源说明
+    • HTML / CSS 集成指南
+    • Favicon 设置说明
+    • 可访问性与优化建议
+    ⏱️  15 分钟可读完
+
+3️⃣  品牌规范：DESIGN-SYSTEM.md
+    • 视觉识别原则
+    • 完整色彩系统规范
+    • 图标几何细节
+    • 自定义修改说明
+    ⏱️  20 分钟可读完
+
+4️⃣  视觉参考：INDEX.txt
+    • 目录结构图
+    • 文件速查表
+    • 设计概念可视化
+    • 集成示例
+    ⏱️  10 分钟可读完
+
+═════════════════════════════════════════════════════════════════════════════
+
+🎯 快速使用指南
+
+FOR WEBSITES (HTML):
+  <link rel="icon" type="image/svg+xml" href="/resources/favicons/favicon-32.svg">
+  <link rel="apple-touch-icon" href="/resources/favicons/favicon-128.svg">
+
+FOR MARKDOWN:
+  ![Claude How To](resources/icons/claude-howto-icon.svg)
+
+FOR REACT/NEXT.JS:
+  import icon from './resources/icons/claude-howto-icon.svg';
+
+FOR CSS BACKGROUND:
+  background-image: url('resources/icons/claude-howto-icon.svg');
+
+═════════════════════════════════════════════════════════════════════════════
+
+🎨 按使用场景选择文件
+
+USE CASE                    FILE                        SIZE
+─────────────────────────────────────────────────────────────────────────────
+Website header              logos/claude-howto-logo.svg     800×200px
+Browser tab                 favicons/favicon-32.svg         32×32px
+Mobile home screen          favicons/favicon-128.svg        128×128px
+App icon                    icons/claude-howto-icon.svg     256×256px
+Social media thumbnail      icons/claude-howto-icon.svg     256×256px
+Bookmark/favorite icon      favicons/favicon-64.svg         64×64px
+Apple touch icon            favicons/favicon-128.svg        128×128px
+PWA/Android app             favicons/favicon-256.svg        256×256px
+Old browsers (fallback)     favicons/favicon-16.svg         16×16px
+
+═════════════════════════════════════════════════════════════════════════════
+
+✅ 校验清单
+
+SVG Assets:
+  ✓ logos/claude-howto-logo.svg       主 Logo
+  ✓ icons/claude-howto-icon.svg       应用图标
+  ✓ favicons/favicon-16.svg           16px favicon
+  ✓ favicons/favicon-32.svg           32px favicon
+  ✓ favicons/favicon-64.svg           64px favicon
+  ✓ favicons/favicon-128.svg          128px favicon
+  ✓ favicons/favicon-256.svg          256px favicon
+
+Documentation:
+  ✓ README.md                         完整指南
+  ✓ QUICK-START.md                    接入指南
+  ✓ DESIGN-SYSTEM.md                  品牌指南
+  ✓ INDEX.txt                         视觉参考
+  ✓ MANIFEST.txt                      本文件
+
+═════════════════════════════════════════════════════════════════════════════
+
+🎨 设计概念
+
+这个图标使用“带代码括号的指南针”，表达 Claude How To 的学习旅程：
+
+              🟢 亮绿色北针
+        高级特性
+        更清晰的前进方向
+
+          ⚫ 黑色南针
+    中级与基础能力
+    稳定、可靠、可落地
+
+        `>` 终端括号
+  代码 / Terminal / CLI 语境
+
+COLOR PALETTE:
+  • Black          #000000    主结构
+  • White          #FFFFFF    浅色背景
+  • Gray           #6B7280    次级元素
+  • Bright Green   #22C55E    强调色
+  • Near Black     #0A0A0A    深色背景
+
+所有颜色都符合可访问性要求。
+
+═════════════════════════════════════════════════════════════════════════════
+
+📥 如何集成
+
+STEP 1: 复制文件
+  cp -r resources/ /path/to/your/project/
+
+STEP 2: 阅读文档
+  先从 resources/QUICK-START.md 开始
+
+STEP 3: 加入 HTML
+  复制提供的代码片段（见 QUICK-START.md）
+
+STEP 4: 自定义（可选）
+  如需修改颜色，请参考 DESIGN-SYSTEM.md
+
+═════════════════════════════════════════════════════════════════════════════
+
+📋 文件规格
+
+Format:             SVG（可缩放矢量图）
+Scalability:        任意尺寸，不会像素化
+Browser Support:    所有现代浏览器
+Accessibility:      满足可访问性要求
+Color Mode:         RGB / RGBA
+Effects:            扁平设计，无需位图
+Customizable:       Yes，详见 DESIGN-SYSTEM.md
+Animated:           Static（可用 CSS / JS 添加动画）
