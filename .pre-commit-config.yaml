@@ -88,6 +88,6 @@ repos:
       - id: build-epub
         name: build-epub
         language: system
-        entry: python scripts/build_epub.py --root en
+        entry: python scripts/check_epub_precommit.py
         pass_filenames: false
         files: ^(.*\.md|scripts/build_epub\.py)$

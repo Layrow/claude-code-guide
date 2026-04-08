@@ -27,7 +27,7 @@ The four checks are:
 2. **cross-references** — Internal links, anchors, code fence syntax (Python script)
 3. **mermaid-syntax** — Validates all Mermaid diagrams parse correctly (Python script)
 4. **link-check** — External URLs are reachable (Python script)
-5. **build-epub** — EPUB generates without errors (on `.md` changes)
+5. **build-epub** — Best-effort local EPUB validation on `.md` changes; CI still performs strict EPUB builds
 
 ### Development Environment Setup
 
@@ -157,7 +157,7 @@ Each numbered folder in `en/` and `zh/` follows the pattern:
 
 3. **Pre-commit is the gatekeeper** — All four quality checks must pass before a PR is accepted. The CI pipeline runs these same checks as a second pass.
 
-4. **Mermaid rendering requires network** — The EPUB build calls Kroki.io API to render diagrams. Build failures here are typically network issues or invalid Mermaid syntax.
+4. **Mermaid rendering requires network** — The EPUB build calls Kroki.io API to render diagrams. Local pre-commit treats transient network failures as warnings, but CI still fails on real EPUB build errors.
 
 5. **This is a tutorial, not a library** — When adding content, focus on clear explanations, copy-paste examples, and visual diagrams. The value is in teaching concepts, not providing reusable code.
 

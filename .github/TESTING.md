@@ -161,6 +161,8 @@ mypy scripts/ --ignore-missing-imports --no-implicit-optional
 
 **Outcome**: If build fails, the workflow fails (critical)
 
+Local pre-commit uses a best-effort EPUB wrapper, so transient Kroki or network issues do not block commits, but CI keeps the strict build as the authoritative check.
+
 #### 6. Summary
 
 - **Runs on**: Ubuntu latest

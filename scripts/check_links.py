@@ -26,6 +26,7 @@ SKIP_DOMAINS = {
     "star-history.com",
     "api.star-history.com",
     "claude.ai",
+    "modelcontextprotocol.io",
     "pypi.org",
     "example.com",
     "localhost",

@@ -118,3 +118,10 @@ Managed via PEP 723 inline script metadata:
 **Rate limiting**: Reduce concurrent requests with `--max-concurrent 3`.
 
 **Missing logo**: The script generates a text-only cover if `claude-code-guide-logo.png` is not found in the selected language root or repository root.
+
+## Pre-commit Behavior
+
+The local `build-epub` pre-commit hook uses `scripts/check_epub_precommit.py`.
+
+- Local pre-commit is **best effort**: transient Kroki, proxy, or network failures are reported as warnings and do not block the commit.
+- CI remains **strict**: GitHub Actions still runs the real EPUB build and fails the workflow if generation breaks.

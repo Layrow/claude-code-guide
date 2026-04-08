@@ -27,7 +27,7 @@ pre-commit run --all-files
 2. **cross-references** — 检查内部链接、锚点和代码块语法（Python 脚本）
 3. **mermaid-syntax** — 校验所有 Mermaid 图都能正确解析（Python 脚本）
 4. **link-check** — 检查外部 URL 是否可访问（Python 脚本）
-5. **build-epub** — 校验 EPUB 能否无错误生成（在 `.md` 变更时运行）
+5. **build-epub** — 在 `.md` 变更时执行 best-effort 的本地 EPUB 校验；CI 仍然运行严格构建
 
 ### 开发环境配置
 
@@ -157,7 +157,7 @@ uv run scripts/build_epub.py --root en --verbose --output custom-name.epub --max
 
 3. **Pre-commit 是第一道门禁** — 在 PR 被接受之前，所有质量检查都必须通过。CI 流水线会再次运行同样的检查作为第二道验证。
 
-4. **Mermaid 渲染依赖网络** — EPUB 构建会调用 Kroki.io API 渲染图表。这里的构建失败通常是网络问题或 Mermaid 语法无效导致的。
+4. **Mermaid 渲染依赖网络** — EPUB 构建会调用 Kroki.io API 渲染图表。本地 pre-commit 会把临时网络失败视为警告，但 CI 里真实的 EPUB 构建失败仍然会阻塞。
 
 5. **这是教程，不是库** — 增加内容时，要优先考虑清晰解释、可复制示例和可视化图示。这个仓库的价值在于讲清概念，而不是提供可复用代码。
 

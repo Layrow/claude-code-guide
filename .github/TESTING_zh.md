@@ -161,6 +161,8 @@ mypy scripts/ --ignore-missing-imports --no-implicit-optional
 
 **结果**：如果构建失败，workflow 就失败（关键阻塞项）
 
+本地 pre-commit 使用的是 best-effort 的 EPUB 包装脚本，因此临时 Kroki / 网络问题不会阻塞 commit；但 CI 里的严格构建仍然是最终门禁。
+
 #### 6. Summary
 
 - **运行环境**：Ubuntu latest

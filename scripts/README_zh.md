@@ -118,3 +118,10 @@ uv run --with pytest --with pytest-asyncio \
 **被限流**：通过 `--max-concurrent 3` 降低并发请求数。
 
 **缺少 Logo**：如果找不到 `claude-code-guide-logo.png`，脚本会生成一个纯文字封面。
+
+## Pre-commit 行为
+
+本地 `build-epub` pre-commit hook 使用的是 `scripts/check_epub_precommit.py`。
+
+- 本地 pre-commit 采用 **best effort** 策略：如果只是 Kroki、代理或临时网络问题，会给出警告，但不会阻塞 commit。
+- CI 仍然保持 **严格模式**：GitHub Actions 会运行真实的 EPUB 构建，只要生成失败就会让 workflow 失败。
