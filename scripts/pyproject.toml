@@ -1,5 +1,5 @@
 [project]
-name = "claude-howto"
+name = "claude-code-guide"
 version = "1.0.0"
 description = "Claude Code How-To Guide with EPUB builder"
 readme = "README.md"
