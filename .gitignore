@@ -84,7 +84,6 @@ openspec/
 
 # Promo video project
 promo-video/
-.agents/
 .codex/
 
 # Video files (too large for git)
