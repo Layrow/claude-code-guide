@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../en/resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="../en/resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="../en/resources/logos/claude-howto-logo.svg">
 </picture>
 
 # EPUB Builder Script
@@ -55,7 +55,7 @@ usage: build_epub.py [-h] [--root ROOT] [--output OUTPUT] [--verbose]
 options:
   -h, --help            show this help message and exit
   --root, -r ROOT       Language root directory (default: en/)
-  --output, -o OUTPUT   Output path (default: claude-howto-guide-en.epub or claude-howto-guide-zh.epub)
+  --output, -o OUTPUT   Output path (default: claude-code-guide-en.epub or claude-code-guide-zh.epub)
   --verbose, -v         Enable verbose logging
   --timeout TIMEOUT     API timeout in seconds (default: 30)
   --max-concurrent N    Max concurrent requests (default: 10)
@@ -76,7 +76,7 @@ uv run scripts/build_epub.py --root en --max-concurrent 5
 
 ## Output
 
-Creates a language-specific EPUB in the repository root directory, for example `claude-howto-guide-en.epub`.
+Creates a language-specific EPUB in the repository root directory, for example `claude-code-guide-en.epub`.
 
 The EPUB includes:
 - Cover image with project logo

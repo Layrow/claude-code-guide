@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
 <p align="center">
@@ -9,8 +9,8 @@
   </a>
 </p>
 
-[![GitHub Stars](https://img.shields.io/github/stars/luongnv89/claude-howto?style=flat&color=gold)](https://github.com/luongnv89/claude-howto/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/luongnv89/claude-howto?style=flat)](https://github.com/luongnv89/claude-howto/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/Layrow/claude-code-guide?style=flat&color=gold)](https://github.com/Layrow/claude-code-guide/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Layrow/claude-code-guide?style=flat)](https://github.com/Layrow/claude-code-guide/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-2.2.0-brightgreen)](CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-2.1+-purple)](https://code.claude.com)
@@ -26,7 +26,7 @@ Go from typing `claude` to orchestrating agents, hooks, skills, and MCP servers 
 ## Table of Contents
 
 - [The Problem](#the-problem)
-- [How Claude How To Fixes This](#how-claude-how-to-fixes-this)
+- [How Claude Code Guide Fixes This](#how-claude-code-guide-fixes-this)
 - [How It Works](#how-it-works)
 - [Not Sure Where to Start?](#not-sure-where-to-start)
 - [Get Started in 15 Minutes](#get-started-in-15-minutes)
@@ -49,7 +49,7 @@ You're leaving 90% of Claude Code's power on the table — and you don't know wh
 
 ---
 
-## How Claude How To Fixes This
+## How Claude Code Guide Fixes This
 
 This isn't another feature reference. It's a **structured, visual, example-driven guide** that teaches you to use every Claude Code feature with real-world templates you can copy into your project today.
 
@@ -103,7 +103,7 @@ Run `/lesson-quiz [topic]` after each module. The quiz pinpoints what you missed
 - **Actively maintained** — synced with every Claude Code release (latest: v2.2.0, March 2026)
 - **Community-driven** — contributions from developers who share their real-world configurations
 
-[![Star History Chart](https://api.star-history.com/svg?repos=luongnv89/claude-howto&type=Date)](https://star-history.com/#luongnv89/claude-howto&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Layrow/claude-code-guide&type=Date)](https://star-history.com/#Layrow/claude-code-guide&Date)
 
 ---
 
@@ -140,8 +140,8 @@ Take the self-assessment or pick your level:
 
 ```bash
 # 1. Clone the guide
-git clone https://github.com/luongnv89/claude-howto.git
-cd claude-howto
+git clone https://github.com/Layrow/claude-code-guide.git
+cd claude-code-guide
 
 # 2. Copy your first slash command
 mkdir -p /path/to/your-project/.claude/commands
@@ -802,7 +802,7 @@ Want to read this guide offline? Generate an EPUB ebook:
 uv run scripts/build_epub.py
 ```
 
-This creates `claude-howto-guide.epub` with all content, including rendered Mermaid diagrams.
+This creates `claude-code-guide.epub` with all content, including rendered Mermaid diagrams.
 
 See [scripts/README.md](../scripts/README.md) for more options.
 
@@ -828,7 +828,7 @@ Found an issue or want to contribute an example? We'd love your help!
 
 If you discover a security vulnerability, please report it responsibly:
 
-1. **Use GitHub Private Vulnerability Reporting**: https://github.com/luongnv89/claude-howto/security/advisories
+1. **Use GitHub Private Vulnerability Reporting**: https://github.com/Layrow/claude-code-guide/security/advisories
 2. **Or read** [.github/SECURITY_REPORTING.md](../.github/SECURITY_REPORTING.md) for detailed instructions
 3. **Do NOT** open a public issue for security vulnerabilities
 
@@ -865,8 +865,8 @@ Thanks to everyone who has contributed to this project!
 
 | Contributor | PRs |
 |-------------|-----|
-| [wjhrdy](https://github.com/wjhrdy) | [#1 - add a tool to create an epub](https://github.com/luongnv89/claude-howto/pull/1) |
-| [VikalpP](https://github.com/VikalpP) | [#7 - fix(docs): Use tilde fences for nested code blocks in concepts guide](https://github.com/luongnv89/claude-howto/pull/7) |
+| [wjhrdy](https://github.com/wjhrdy) | [#1 - add a tool to create an epub](https://github.com/Layrow/claude-code-guide/pull/1) |
+| [VikalpP](https://github.com/VikalpP) | [#7 - fix(docs): Use tilde fences for nested code blocks in concepts guide](https://github.com/Layrow/claude-code-guide/pull/7) |
 
 ---
 

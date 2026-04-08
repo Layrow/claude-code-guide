@@ -1,10 +1,10 @@
-# Claude How To - Design System
+# Claude Code Guide - Design System
 
 ## Visual Identity
 
 ### Icon Design Concept: Compass with Code Bracket
 
-The Claude How To icon uses a **compass with a `>` code bracket** to represent guided navigation through code:
+The Claude Code Guide icon uses a **compass with a `>` code bracket** to represent guided navigation through code:
 
 ```
      N (green)

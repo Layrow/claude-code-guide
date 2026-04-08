@@ -24,9 +24,9 @@ cp resources/favicons/* /path/to/your/website/public/
 ## Use in Markdown/Documentation
 
 ```markdown
-# Claude How To
+# Claude Code Guide
 
-![Claude How To Logo](resources/logos/claude-howto-logo.svg)
+![Claude Code Guide Logo](resources/logos/claude-howto-logo.svg)
 
 ![Icon](resources/icons/claude-howto-icon.svg)
 ```

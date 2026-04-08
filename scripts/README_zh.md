@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="../resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="../resources/logos/claude-howto-logo.svg">
 </picture>
 
 # EPUB 构建脚本
@@ -55,7 +55,7 @@ usage: build_epub.py [-h] [--root ROOT] [--output OUTPUT] [--verbose]
 options:
   -h, --help            显示帮助并退出
   --root, -r ROOT       根目录（默认：仓库根目录）
-  --output, -o OUTPUT   输出路径（默认：claude-howto-guide.epub）
+  --output, -o OUTPUT   输出路径（默认：claude-code-guide.epub）
   --verbose, -v         启用详细日志
   --timeout TIMEOUT     API 超时时间，单位秒（默认：30）
   --max-concurrent N    最大并发请求数（默认：10）
@@ -76,7 +76,7 @@ uv run scripts/build_epub.py --max-concurrent 5
 
 ## 输出结果
 
-会在仓库根目录生成 `claude-howto-guide.epub`。
+会在仓库根目录生成 `claude-code-guide.epub`。
 
 生成的 EPUB 包含：
 - 带项目 Logo 的封面图

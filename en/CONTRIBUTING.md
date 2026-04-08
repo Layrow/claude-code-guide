@@ -1,15 +1,15 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
-# Contributing to Claude How To
+# Contributing to Claude Code Guide
 
 Thank you for your interest in contributing to this project! This guide will help you understand how to contribute effectively.
 
 ## About This Project
 
-Claude How To is a visual, example-driven guide to Claude Code. We provide:
+Claude Code Guide is a visual, example-driven guide to Claude Code. We provide:
 - **Mermaid diagrams** explaining how features work
 - **Production-ready templates** you can use immediately
 - **Real-world examples** with context and best practices
@@ -54,8 +54,8 @@ Help improve the guide:
 
 ### 1. Fork and Clone
 ```bash
-git clone https://github.com/luongnv89/claude-howto.git
-cd claude-howto
+git clone https://github.com/Layrow/claude-code-guide.git
+cd claude-code-guide
 ```
 
 ### 2. Create a Branch

@@ -15,7 +15,7 @@ Usage:
 
     Command-line options:
         --root, -r      Root directory containing markdown files (default: repo root)
-        --output, -o    Output EPUB file path (default: <root>/claude-howto-guide.epub)
+        --output, -o    Output EPUB file path (default: <root>/claude-code-guide.epub)
         --verbose, -v   Enable verbose logging
         --timeout       Timeout for API requests in seconds (default: 30)
         --max-concurrent Maximum concurrent API requests (default: 10)
@@ -111,7 +111,7 @@ class EPUBConfig:
     logo_path: Path | None = None
 
     # EPUB Metadata
-    identifier: str = "claude-howto-guide"
+    identifier: str = "claude-code-guide"
     title: str = "Claude Code How-To Guide"
     language: str = "en"
     author: str = "Claude Code Community"
@@ -1073,7 +1073,7 @@ def main() -> int:
         "-o",
         type=Path,
         default=None,
-        help="Output EPUB file path (default: <root>/claude-howto-guide.epub)",
+        help="Output EPUB file path (default: <root>/claude-code-guide.epub)",
     )
     parser.add_argument(
         "--verbose", "-v", action="store_true", help="Enable verbose logging"
@@ -1098,7 +1098,7 @@ def main() -> int:
     root = (args.root if args.root else default_root).resolve()
     language, title = infer_language_from_root(root)
     default_output_name = (
-        "claude-howto-guide-zh.epub" if language == "zh" else "claude-howto-guide-en.epub"
+        "claude-code-guide-zh.epub" if language == "zh" else "claude-code-guide-en.epub"
     )
     output = (args.output if args.output else (repo_root / default_output_name)).resolve()
 

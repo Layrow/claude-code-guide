@@ -4,7 +4,7 @@
 
 ## 项目概览
 
-Claude How To 是一个面向 Claude Code 功能的教程仓库。这是一个 **documentation-as-code** 项目，主要产出是按编号组织的 Markdown 学习模块，而不是一个可执行应用。
+Claude Code Guide 是一个面向 Claude Code 功能的教程仓库。这是一个 **documentation-as-code** 项目，主要产出是按编号组织的 Markdown 学习模块，而不是一个可执行应用。
 
 **架构**：每个模块（01-10）聚焦一个特定的 Claude Code 特性，包含可直接复制使用的模板、Mermaid 图和示例。构建系统会校验文档质量，并生成 EPUB 电子书。
 

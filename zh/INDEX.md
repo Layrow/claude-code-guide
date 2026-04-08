@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
 # Claude Code 示例完整索引
@@ -488,7 +488,7 @@ documentation/
 ## Complete File Tree
 
 ```text
-claude-howto/
+claude-code-guide/
 ├── README.md                                    # 主入口总览
 ├── INDEX.md                                     # 当前文件
 ├── QUICK_REFERENCE.md                           # 速查卡

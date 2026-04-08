@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
 # Style Guide
 
-> Conventions and formatting rules for contributing to Claude How To. Follow this guide to keep content consistent, professional, and easy to maintain.
+> Conventions and formatting rules for contributing to Claude Code Guide. Follow this guide to keep content consistent, professional, and easy to maintain.
 
 ---
 
@@ -510,7 +510,7 @@ All documents that start with a logo use the `<picture>` element for dark/light 
 ```html
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 ```
 

@@ -177,17 +177,17 @@ Documentation:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 HTML（Web）:
-  <img src="resources/icons/claude-howto-icon.svg" alt="Claude How To">
+  <img src="resources/icons/claude-howto-icon.svg" alt="Claude Code Guide">
 
 Markdown:
-  ![Claude How To](resources/icons/claude-howto-icon.svg)
+  ![Claude Code Guide](resources/icons/claude-howto-icon.svg)
 
 CSS Background:
   background-image: url('resources/icons/claude-howto-icon.svg');
 
 React/JSX:
   import logo from './resources/icons/claude-howto-icon.svg';
-  <img src={logo} alt="Claude How To" />
+  <img src={logo} alt="Claude Code Guide" />
 
 Next.js/Web Framework:
-  <Image src={logo} alt="Claude How To" />
+  <Image src={logo} alt="Claude Code Guide" />

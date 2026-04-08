@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="logos/claude-howto-logo.svg">
 </picture>
 
-# Claude How To - 品牌资源
+# Claude Code Guide - 品牌资源
 
-这是 Claude How To 项目的完整品牌资源集合，包含 logos、icons 和 favicons。所有素材都使用 V3.0 设计：一个带代码括号符号（`>`）的指南针，代表“在代码世界中的引导式导航”，整体采用黑 / 白 / 灰配色，并以亮绿色（#22C55E）作为强调色。
+这是 Claude Code Guide 项目的完整品牌资源集合，包含 logos、icons 和 favicons。所有素材都使用 V3.0 设计：一个带代码括号符号（`>`）的指南针，代表“在代码世界中的引导式导航”，整体采用黑 / 白 / 灰配色，并以亮绿色（#22C55E）作为强调色。
 
 ## 目录结构
 
@@ -249,7 +249,7 @@ inkscape -D -z --file=favicon-256.svg --export-png=favicon-256.png
 
 ## Attribution
 
-这些资源属于 Claude How To 项目的一部分。
+这些资源属于 Claude Code Guide 项目的一部分。
 
 **License**: MIT（见项目中的 LICENSE 文件）
 

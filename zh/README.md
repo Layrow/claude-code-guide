@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
 <p align="center">
@@ -9,8 +9,8 @@
   </a>
 </p>
 
-[![GitHub Stars](https://img.shields.io/github/stars/luongnv89/claude-howto?style=flat&color=gold)](https://github.com/luongnv89/claude-howto/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/luongnv89/claude-howto?style=flat)](https://github.com/luongnv89/claude-howto/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/Layrow/claude-code-guide?style=flat&color=gold)](https://github.com/Layrow/claude-code-guide/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Layrow/claude-code-guide?style=flat)](https://github.com/Layrow/claude-code-guide/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-2.2.0-brightgreen)](CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-2.1+-purple)](https://code.claude.com)
@@ -26,7 +26,7 @@
 ## 目录
 
 - [问题是什么](#问题是什么)
-- [Claude How To 如何解决这个问题](#claude-how-to-如何解决这个问题)
+- [Claude Code Guide 如何解决这个问题](#claude-code-guide-如何解决这个问题)
 - [它是如何工作的](#它是如何工作的)
 - [不知道从哪里开始？](#不知道从哪里开始)
 - [15 分钟快速开始](#15-分钟快速开始)
@@ -49,7 +49,7 @@
 
 ---
 
-## Claude How To 如何解决这个问题
+## Claude Code Guide 如何解决这个问题
 
 这不是另一份单纯的功能参考手册。它是一份 **结构化、可视化、示例驱动的指南**，会教你如何使用 Claude Code 的每一项能力，并且给你今天就能复制进项目里的真实模板。
 
@@ -103,7 +103,7 @@
 - **持续维护中** —— 每次 Claude Code 发布都会同步（最新版本：v2.2.0，2026 年 3 月）
 - **社区驱动** —— 贡献者会把真实的生产配置回流进项目
 
-[![Star History Chart](https://api.star-history.com/svg?repos=luongnv89/claude-howto&type=Date)](https://star-history.com/#luongnv89/claude-howto&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Layrow/claude-code-guide&type=Date)](https://star-history.com/#Layrow/claude-code-guide&Date)
 
 ---
 
@@ -140,8 +140,8 @@
 
 ```bash
 # 1. Clone 这份指南
-git clone https://github.com/luongnv89/claude-howto.git
-cd claude-howto
+git clone https://github.com/Layrow/claude-code-guide.git
+cd claude-code-guide
 
 # 2. 复制你的第一个 slash command
 mkdir -p /path/to/your-project/.claude/commands
@@ -802,7 +802,7 @@ mypy scripts/ --ignore-missing-imports
 uv run scripts/build_epub.py
 ```
 
-这会生成 `claude-howto-guide.epub`，其中包含所有内容以及渲染后的 Mermaid 图表。
+这会生成 `claude-code-guide.epub`，其中包含所有内容以及渲染后的 Mermaid 图表。
 
 更多选项见 [scripts/README.md](../scripts/README.md)。
 
@@ -828,7 +828,7 @@ uv run scripts/build_epub.py
 
 如果你发现了安全漏洞，请负责任地报告：
 
-1. **使用 GitHub Private Vulnerability Reporting**：https://github.com/luongnv89/claude-howto/security/advisories
+1. **使用 GitHub Private Vulnerability Reporting**：https://github.com/Layrow/claude-code-guide/security/advisories
 2. **或者阅读** [.github/SECURITY_REPORTING.md](../.github/SECURITY_REPORTING.md) 了解详细流程
 3. **不要** 为安全漏洞创建公开 issue
 
@@ -865,8 +865,8 @@ uv run scripts/build_epub.py
 
 | Contributor | PRs |
 |-------------|-----|
-| [wjhrdy](https://github.com/wjhrdy) | [#1 - add a tool to create an epub](https://github.com/luongnv89/claude-howto/pull/1) |
-| [VikalpP](https://github.com/VikalpP) | [#7 - fix(docs): Use tilde fences for nested code blocks in concepts guide](https://github.com/luongnv89/claude-howto/pull/7) |
+| [wjhrdy](https://github.com/wjhrdy) | [#1 - add a tool to create an epub](https://github.com/Layrow/claude-code-guide/pull/1) |
+| [VikalpP](https://github.com/VikalpP) | [#7 - fix(docs): Use tilde fences for nested code blocks in concepts guide](https://github.com/Layrow/claude-code-guide/pull/7) |
 
 ---
 

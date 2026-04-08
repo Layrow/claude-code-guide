@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 
 # 风格指南
 
-> 这是为 Claude How To 贡献内容时应遵循的约定与格式规则。遵循本指南可以让内容保持一致、专业，并且易于维护。
+> 这是为 Claude Code Guide 贡献内容时应遵循的约定与格式规则。遵循本指南可以让内容保持一致、专业，并且易于维护。
 
 ---
 
@@ -510,7 +510,7 @@ agent: Explore                     # Agent type for context: fork
 ```html
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="resources/logos/claude-howto-logo.svg">
 </picture>
 ```
 

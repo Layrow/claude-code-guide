@@ -1,4 +1,4 @@
-# Claude How To
+# Claude Code Guide
 
 This repository now uses a language-separated documentation layout:
 

@@ -82,7 +82,7 @@ FOR WEBSITES (HTML):
   <link rel="apple-touch-icon" href="/resources/favicons/favicon-128.svg">
 
 FOR MARKDOWN:
-  ![Claude How To](resources/icons/claude-howto-icon.svg)
+  ![Claude Code Guide](resources/icons/claude-howto-icon.svg)
 
 FOR REACT/NEXT.JS:
   import icon from './resources/icons/claude-howto-icon.svg';
@@ -130,7 +130,7 @@ Documentation:
 
 🎨 设计概念
 
-这个图标使用“带代码括号的指南针”，表达 Claude How To 的学习旅程：
+这个图标使用“带代码括号的指南针”，表达 Claude Code Guide 的学习旅程：
 
               🟢 亮绿色北针
         高级特性

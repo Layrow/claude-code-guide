@@ -2,7 +2,7 @@
 
 ## 概览
 
-Claude How To 项目的安全性对我们非常重要。本文档说明了我们的安全实践，以及如何以负责任的方式报告安全漏洞。
+Claude Code Guide 项目的安全性对我们非常重要。本文档说明了我们的安全实践，以及如何以负责任的方式报告安全漏洞。
 
 ## 支持版本
 
@@ -101,7 +101,7 @@ Claude How To 项目的安全性对我们非常重要。本文档说明了我们
 
 **对于敏感安全问题，请优先使用 GitHub 的私密漏洞报告：**
 
-1. 访问：https://github.com/luongnv89/claude-howto/security/advisories
+1. 访问：https://github.com/Layrow/claude-code-guide/security/advisories
 2. 点击 “Report a vulnerability”
 3. 填写漏洞详情
 4. 尽量包含：
@@ -304,7 +304,7 @@ pip-audit
 
 ## 安全公告归档
 
-过往安全公告可在 [GitHub Security Advisories](https://github.com/luongnv89/claude-howto/security/advisories) 标签页中查看。
+过往安全公告可在 [GitHub Security Advisories](https://github.com/Layrow/claude-code-guide/security/advisories) 标签页中查看。
 
 ## 联系方式
 
@@ -331,4 +331,4 @@ pip-audit
 
 ---
 
-感谢你帮助 Claude How To 保持安全！🔒
+感谢你帮助 Claude Code Guide 保持安全！🔒

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The security of the Claude How To project is important to us. This document outlines our security practices and describes how to report security vulnerabilities responsibly.
+The security of the Claude Code Guide project is important to us. This document outlines our security practices and describes how to report security vulnerabilities responsibly.
 
 ## Supported Versions
 
@@ -101,7 +101,7 @@ These are outside the scope of this project:
 
 **For sensitive security issues, please use GitHub's private vulnerability reporting:**
 
-1. Visit: https://github.com/luongnv89/claude-howto/security/advisories
+1. Visit: https://github.com/Layrow/claude-code-guide/security/advisories
 2. Click "Report a vulnerability"
 3. Fill in the vulnerability details
 4. Include:
@@ -304,7 +304,7 @@ pip-audit
 
 ## Security Advisories Archive
 
-Past security advisories are available in the [GitHub Security Advisories](https://github.com/luongnv89/claude-howto/security/advisories) tab.
+Past security advisories are available in the [GitHub Security Advisories](https://github.com/Layrow/claude-code-guide/security/advisories) tab.
 
 ## Contact
 
@@ -331,4 +331,4 @@ This security policy is reviewed and updated:
 
 ---
 
-Thank you for helping keep Claude How To secure! 🔒
+Thank you for helping keep Claude Code Guide secure! 🔒

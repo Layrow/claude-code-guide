@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="../resources/logos/claude-howto-logo.svg">
+  <img alt="Claude Code Guide" src="../resources/logos/claude-howto-logo.svg">
 </picture>
 
 # Slash Commands
@@ -549,4 +549,4 @@ If both exist with the same name, the **skill takes precedence**. Remove one or 
 
 ---
 
-*Part of the [Claude How To](../) guide series*
+*Part of the [Claude Code Guide](../) guide series*

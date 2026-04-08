@@ -83,7 +83,7 @@ FOR WEBSITES (HTML):
   <link rel="apple-touch-icon" href="/resources/favicons/favicon-128.svg">
 
 FOR MARKDOWN:
-  ![Claude How To](resources/icons/claude-howto-icon.svg)
+  ![Claude Code Guide](resources/icons/claude-howto-icon.svg)
 
 FOR REACT/NEXT.JS:
   import icon from './resources/icons/claude-howto-icon.svg';
@@ -131,7 +131,7 @@ Documentation:
 
 🎨 DESIGN CONCEPT
 
-The icon represents the Claude How To learning journey with ascending hexagons:
+The icon represents the Claude Code Guide learning journey with ascending hexagons:
 
               🔶 MINT
         Advanced Features

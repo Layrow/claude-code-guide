@@ -24,9 +24,9 @@ cp resources/favicons/* /path/to/your/website/public/
 ## 在 Markdown / 文档中使用
 
 ```markdown
-# Claude How To
+# Claude Code Guide
 
-![Claude How To Logo](logos/claude-howto-logo.svg)
+![Claude Code Guide Logo](logos/claude-howto-logo.svg)
 
 ![Icon](icons/claude-howto-icon.svg)
 ```
