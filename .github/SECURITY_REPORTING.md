@@ -5,7 +5,7 @@ This file explains how to report security vulnerabilities to the Claude How To p
 ## Quick Links
 
 - **Private Reporting**: https://github.com/luongnv89/claude-howto/security/advisories
-- **Security Policy**: [SECURITY.md](../SECURITY.md)
+- **Security Policy**: [SECURITY.md](../en/SECURITY.md)
 - **Report Template**: See below
 
 ## Report a Vulnerability
@@ -262,7 +262,7 @@ If you're conducting security research:
 
 For questions about this process:
 
-1. Check [SECURITY.md](../SECURITY.md) for detailed policy
+1. Check [SECURITY.md](../en/SECURITY.md) for detailed policy
 2. Look at [FAQ](#faq) section below
 3. Open a discussion with `[SECURITY]` label
 4. Use private vulnerability reporting for sensitive questions
@@ -298,9 +298,9 @@ A: Check GitHub security advisories page. If you still don't see a response, you
 
 ## Resources
 
-- [SECURITY.md](../SECURITY.md) - Full security policy
-- [CONTRIBUTING.md](../CONTRIBUTING.md) - Contributing guidelines
-- [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md) - Community standards
+- [SECURITY.md](../en/SECURITY.md) - Full security policy
+- [CONTRIBUTING.md](../en/CONTRIBUTING.md) - Contributing guidelines
+- [CODE_OF_CONDUCT.md](../en/CODE_OF_CONDUCT.md) - Community standards
 - [OWASP Vulnerability Disclosure](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html) - Responsible disclosure best practices
 - [Coordinated Vulnerability Disclosure](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html)
 

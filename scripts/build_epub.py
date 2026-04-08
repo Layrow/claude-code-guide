@@ -24,7 +24,7 @@ Usage:
     automatically install required packages in an isolated environment.
 
 Output:
-    Creates 'claude-howto-guide.epub' in the repository root directory.
+    Creates an EPUB for the selected language root.
 
 Features:
     - Organizes chapters by folder structure (01-slash-commands, etc.)
@@ -227,6 +227,10 @@ def validate_inputs(config: EPUBConfig, logger: logging.Logger) -> None:
 
     # Check logo if specified
     logo_path = config.logo_path or (config.root_path / "claude-howto-logo.png")
+    if not logo_path.exists():
+        fallback_logo = config.root_path.parent / "claude-howto-logo.png"
+        if fallback_logo.exists():
+            logo_path = fallback_logo
     if not logo_path.exists():
         logger.warning(
             f"Logo file not found: {logo_path}. Cover will be generated without logo."
@@ -1040,6 +1044,13 @@ def create_epub(root_path: Path, output_path: Path, verbose: bool = False) -> Pa
     return asyncio.run(build_epub_async(config, logger))
 
 
+def infer_language_from_root(root_path: Path) -> tuple[str, str]:
+    """Infer language metadata from the selected root path."""
+    if root_path.name == "zh":
+        return "zh", "Claude Code How-To Guide (Chinese)"
+    return "en", EPUBConfig.en_title
+
+
 # =============================================================================
 # CLI
 # =============================================================================
@@ -1082,16 +1093,14 @@ def main() -> int:
     args = parser.parse_args()
 
     # Determine root path and output settings
-    repo_root = args.root if args.root else Path(__file__).parent.parent
-    repo_root = repo_root.resolve()
-
-    root = repo_root
-    output = args.output or (repo_root / "claude-howto-guide.epub")
-    title = EPUBConfig.en_title
-    language = "en"
-
-    root = root.resolve()
-    output = output.resolve()
+    repo_root = Path(__file__).parent.parent.resolve()
+    default_root = repo_root / "en" if (repo_root / "en").exists() else repo_root
+    root = (args.root if args.root else default_root).resolve()
+    language, title = infer_language_from_root(root)
+    default_output_name = (
+        "claude-howto-guide-zh.epub" if language == "zh" else "claude-howto-guide-en.epub"
+    )
+    output = (args.output if args.output else (repo_root / default_output_name)).resolve()
 
     logger = setup_logging(args.verbose)
     config = EPUBConfig(

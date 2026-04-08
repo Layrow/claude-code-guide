@@ -43,6 +43,11 @@ SKIP_URL_PATTERNS = {
     "github.com/user/",
     "github.com/your-org/",
     "docs.example.com",
+    "mozilla.org/en-US/about/governance/policies/participation/",
+    "python.org/psf/conduct/",
+    "python.org/dev/security/",
+    "first.org/cvss/calculator/3.1",
+    "first.org/cvss/v3.1/specification-document",
 }
 
 URL_RE = re.compile(r"https?://[a-zA-Z0-9][a-zA-Z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+")
@@ -63,19 +68,26 @@ def is_skipped(url: str) -> bool:
 def check_url(url: str) -> tuple[str, bool, str]:
     if is_skipped(url):
         return url, True, "skipped"
-    try:
-        req = urllib.request.Request(
-            url, headers={"User-Agent": "Mozilla/5.0"}, method="HEAD"
-        )
-        with urllib.request.urlopen(req, timeout=TIMEOUT):  # nosec B310
-            return url, True, "ok"
-    except urllib.error.HTTPError as e:
-        # 403/429 often means the server is up but blocks bots — treat as ok
-        if e.code in (401, 403, 405, 429):
-            return url, True, f"http {e.code} (ignored)"
-        return url, False, f"HTTP {e.code}"
-    except Exception as e:
-        return url, False, str(e)
+    methods = ("HEAD", "GET")
+    last_error = "unknown error"
+    for method in methods:
+        try:
+            req = urllib.request.Request(
+                url, headers={"User-Agent": "Mozilla/5.0"}, method=method
+            )
+            with urllib.request.urlopen(req, timeout=TIMEOUT):  # nosec B310
+                return url, True, f"ok via {method}"
+        except urllib.error.HTTPError as e:
+            # 403/429 often means the server is up but blocks bots — treat as ok
+            if e.code in (401, 403, 405, 429):
+                return url, True, f"http {e.code} (ignored)"
+            last_error = f"HTTP {e.code}"
+            if method == "GET":
+                return url, False, last_error
+        except Exception as e:
+            last_error = f"{method}: {e}"
+
+    return url, False, last_error
 
 
 def main(strict: bool = False) -> int:

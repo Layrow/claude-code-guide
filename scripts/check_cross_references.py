@@ -90,13 +90,19 @@ def main() -> int:
         if len(re.findall(r"^```", content, re.MULTILINE)) % 2 != 0:
             errors.append(f"{file_path}: unmatched code fences")
 
-    # All numbered lesson dirs must have README.md
-    for i in range(1, 11):
-        errors.extend(
-            f"{d}: missing README.md"
-            for d in Path().glob(f"{i:02d}-*")
-            if d.is_dir() and not (d / "README.md").exists()
-        )
+    # All numbered lesson dirs must have README.md.
+    # Support both legacy root-level layout and the current en/ + zh/ layout.
+    lesson_roots = [Path("en"), Path("zh")]
+    if not any(root.exists() for root in lesson_roots):
+        lesson_roots = [Path(".")]
+
+    for lesson_root in lesson_roots:
+        for i in range(1, 11):
+            errors.extend(
+                f"{d}: missing README.md"
+                for d in lesson_root.glob(f"{i:02d}-*")
+                if d.is_dir() and not (d / "README.md").exists()
+            )
 
     if errors:
         print("❌ Cross-reference errors:")

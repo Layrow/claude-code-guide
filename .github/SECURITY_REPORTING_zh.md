@@ -5,7 +5,7 @@
 ## 快速链接
 
 - **私密报告入口**: https://github.com/luongnv89/claude-howto/security/advisories
-- **安全策略**: [SECURITY.md](../SECURITY.md)
+- **安全策略**: [SECURITY.md](../zh/SECURITY.md)
 - **报告模板**: 见下文
 
 ## 报告安全漏洞

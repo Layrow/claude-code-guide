@@ -3,7 +3,7 @@
 # Run `pre-commit run --all-files` to check all files
 
 default_language_version:
-  python: python3.11
+  python: python3
 
 repos:
   # Ruff - Fast Python linter and formatter
@@ -88,6 +88,6 @@ repos:
       - id: build-epub
         name: build-epub
         language: system
-        entry: uv run scripts/build_epub.py
+        entry: python scripts/build_epub.py --root en
         pass_filenames: false
         files: ^(.*\.md|scripts/build_epub\.py)$
